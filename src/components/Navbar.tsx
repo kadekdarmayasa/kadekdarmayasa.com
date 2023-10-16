@@ -7,7 +7,7 @@ const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState<string>('Home')
 
   return (
-    <nav className='bg-ligt-gray h-auto px-8'>
+    <nav className='bg-light-gray h-auto px-8'>
       <div className='sm:container px-20 h-16 flex items-center justify-between'>
         <a href='/' className='text-black text-2xl font-extrabold'>
           DARMA<span className='text-purple'>.</span>

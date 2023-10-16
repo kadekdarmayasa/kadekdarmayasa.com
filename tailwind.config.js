@@ -5,13 +5,11 @@ export default {
     container: {
       center: true,
     },
-    colors: {
-      black: '#1D1D1D',
-    },
     extend: {
       colors: {
+        black: '#1D1D1D',
         purple: '#6202FF',
-        'ligt-gray': '#F9F9F9',
+        'light-gray': '#F9F9F9',
       },
     },
   },
