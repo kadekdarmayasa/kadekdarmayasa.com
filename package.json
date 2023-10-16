@@ -11,7 +11,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "./src/**/*": "prettier --write --ignore-unknown"
+    "./src/**/*.tsx": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "react": "^18.2.0",
