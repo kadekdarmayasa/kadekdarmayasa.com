@@ -1,6 +1,6 @@
-import linkedinIcon from '../assets/linkedin.svg'
-import darmaProfile from '../assets/darma-profile.png'
-import bannerDecoration from '../assets/banner-decoration.svg'
+import linkedinIcon from '../assets/images/linkedin.svg'
+import darmaProfile from '../assets/images/darma-profile.png'
+import bannerDecoration from '../assets/images/banner-decoration.svg'
 
 const Banner = () => {
   return (
@@ -8,13 +8,13 @@ const Banner = () => {
       <div className='sm:container px-20 flex justify-between items-center'>
         <div className='flex-1 text-black relative'>
           <div className='relative z-20'>
-            <small className='text-3xl block mb-4'>
-              Hi👋, I'm <b>Darmayasa</b>
+            <small className='text-3xl block mb-4 font-normal'>
+              Hi👋, I'm <b className='font-bold'>Darmayasa</b>
             </small>
             <h1 className='text-5xl font-bold mb-10'>
               Front-End <span className='text-purple'>Web Developer</span>
             </h1>
-            <p className='text-xl leading-9 mb-8'>
+            <p className='text-xl leading-9 mb-8 font-medium'>
               I have 1.5 years experience in building and maintaining Front-End
               applications.{' '}
             </p>
