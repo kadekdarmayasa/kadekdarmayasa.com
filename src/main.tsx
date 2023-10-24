@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import Navbar from './components/Navbar'
 import Banner from './components/Banner'
 import HighlightedProject from './components/HighlightedProject'
+import Certification from './components/Certification'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     </header>
     <main>
       <HighlightedProject />
+      <Certification />
     </main>
   </React.StrictMode>,
 )
