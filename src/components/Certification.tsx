@@ -11,16 +11,24 @@ const Certification = () => {
     dots: true,
     infinite: true,
     speed: 1000,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 5000,
-    centerMode: true,
+    responsive: [
+      {
+        breakpoint: 1020,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   }
 
   return (
     <section className='px-8 text-black mt-20 bg-light-gray'>
-      <div className='sm:container px-20 py-20'>
+      <div className='sm:container md:px-20 py-20'>
         <div>
           <h2 className='text-4xl font-bold'>🚀 Certifications Earned</h2>
           <p className='text-xl font-medium mt-6 max-w-[700px] leading-9'>

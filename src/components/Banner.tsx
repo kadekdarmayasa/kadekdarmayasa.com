@@ -12,11 +12,11 @@ const Banner = () => {
               Hi👋, I'm <b className='font-bold'>Darmayasa</b>
             </small>
             <h1 className='text-5xl font-bold mb-10'>
-              Front-End <span className='text-purple'>Web Developer</span>
+              full-stack <span className='text-purple'>web developer</span>
             </h1>
-            <p className='text-xl leading-9 mb-8 font-medium'>
-              I have 1.5 years experience in building and maintaining Front-End
-              applications.{' '}
+            <p className='text-xl leading-9 mb-8 font-medium max-w-[640px]'>
+              I have more than 1.5 years experience in building and maintaining
+              web applications.{' '}
             </p>
             <div className='flex gap-8'>
               <a
