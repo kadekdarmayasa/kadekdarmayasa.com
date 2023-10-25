@@ -4,13 +4,13 @@ import instagramLogo from '../assets/images/logo-instagram.svg'
 
 const Contact = () => {
   return (
-    <section className='px-8 text-black mt-20'>
+    <section id='contact' className='px-8 text-black mt-20 scroll-mt-24'>
       <div className='sm:container md:px-20'>
         <div>
-          <h3 className='text-2xl md:text-3xl block font-bold text-slate-500'>
+          <h3 className='text-xl sm:text-2xl md:text-3xl block font-bold text-slate-500'>
             🤝 Let's Get In Touch
           </h3>
-          <h2 className='text-4xl md:text-5xl font-bold mt-10'>
+          <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold mt-10'>
             Do you have any project ideas or just want to say hi?
           </h2>
         </div>
@@ -30,9 +30,13 @@ const Contact = () => {
                 rel='noopener noreferrer'
                 target='_blank'>
                 <div className='border-purple border-[1px] w-10 h-10 rounded-md flex items-center justify-center group-hover:bg-purple/5 transition-all mr-4'>
-                  <img src={emailLogo} alt='Darmayasa`s email address' />
+                  <img
+                    src={emailLogo}
+                    alt='Darmayasa`s email address'
+                    className='w-6 h-6'
+                  />
                 </div>
-                <span className='text-xl leading-9 font-regular text-purple'>
+                <span className='text-md sm:text-xl leading-9 font-regular text-purple'>
                   darmayasadiputra@gmail.com
                 </span>
               </a>
@@ -45,9 +49,10 @@ const Contact = () => {
                   <img
                     src={instagramLogo}
                     alt='Darmayasa`s instagram account'
+                    className='w-6 h-6'
                   />
                 </div>
-                <span className='text-xl leading-9 font-regular text-purple'>
+                <span className='text-md sm:text-xl leading-9 font-regular text-purple'>
                   @kadekdarmayasaa
                 </span>
               </a>

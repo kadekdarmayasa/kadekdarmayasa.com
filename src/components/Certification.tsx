@@ -27,11 +27,15 @@ const Certification = () => {
   }
 
   return (
-    <section className='px-8 text-black mt-20 bg-light-gray'>
+    <section
+      id='certifications'
+      className='px-8 text-black mt-20 bg-light-gray scroll-mt-20'>
       <div className='sm:container md:px-20 py-20'>
         <div>
-          <h2 className='text-4xl font-bold'>🚀 Certifications Earned</h2>
-          <p className='text-xl font-medium mt-6 max-w-[700px] leading-9'>
+          <h2 className='text-3xl sm:text-4xl font-bold'>
+            🚀 Certifications Earned
+          </h2>
+          <p className='text-lg sm:text-xl font-medium mt-6 max-w-[700px] leading-9'>
             I've taken a few classes and entered various web design competitions
             to hone my present talents and broaden my knowledge.
           </p>

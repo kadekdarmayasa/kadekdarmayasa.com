@@ -4,21 +4,23 @@ import bannerDecoration from '../assets/images/banner-decoration.svg'
 
 const Banner = () => {
   return (
-    <section id='home' className='bg-light-gray pt-16 mt-20 px-8 lg:px-0'>
+    <section
+      id='home'
+      className='bg-light-gray pt-14 sm:pt-16 mt-20 px-8 lg:px-0 scroll-mt-20'>
       <div className='md:container md:px-20 flex justify-between items-center flex-col lg:flex-row'>
         <div className='flex-1 text-black relative'>
           <div className='relative z-20'>
-            <small className='text-3xl block mb-4 font-normal'>
+            <small className='text-2xl sm:text-3xl block mb-4 font-normal'>
               Hi👋, I'm <b className='font-bold'>Darmayasa</b>
             </small>
-            <h1 className='text-5xl font-bold mb-10'>
+            <h1 className='text-4xl sm:text-5xl font-bold mb-10'>
               full-stack <span className='text-purple'>web developer</span>
             </h1>
-            <p className='text-xl leading-9 mb-8 font-medium max-w-[640px]'>
+            <p className='text-lg sm:text-xl leading-9 mb-8 font-medium max-w-[640px]'>
               I have more than 1.5 years experience in building and maintaining
               web applications.{' '}
             </p>
-            <div className='flex gap-8'>
+            <div className='flex gap-4 sm:gap-8'>
               <a
                 href='https://drive.google.com/file/d/1DiSVlg5RyRGtcs0AFn1-GLl3f59Ockam/view?usp=sharing'
                 target='_blank'

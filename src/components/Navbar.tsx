@@ -2,7 +2,24 @@ import { v4 as uuidv4 } from 'uuid'
 import { useState } from 'react'
 import menuIcon from '../assets/images/menu.svg'
 
-const menus = ['Home', 'Projects', 'Certifications', 'Contact Me']
+const menus = [
+  {
+    name: 'Home',
+    href: '#home',
+  },
+  {
+    name: 'Projects',
+    href: '#projects',
+  },
+  {
+    name: 'Certifications',
+    href: '#certifications',
+  },
+  {
+    name: 'Contact Me',
+    href: '#contact',
+  },
+]
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState<string>('Home')
@@ -28,13 +45,13 @@ const Navbar = () => {
               <li
                 key={uuidv4()}
                 className='md:ml-5'
-                onClick={() => setActiveMenu(menu)}>
+                onClick={() => setActiveMenu(menu.name)}>
                 <a
-                  href={`#${menu.toLowerCase()}`}
+                  href={`${menu.href}`}
                   className={`font-medium text-lg hover:text-purple transition-all min-h-[44px] flex md:items-center md:justify-center ${
-                    menu === activeMenu ? 'text-purple' : 'text-black'
+                    menu.name === activeMenu ? 'text-purple' : 'text-black'
                   }`}>
-                  {menu}
+                  {menu.name}
                 </a>
               </li>
             )
