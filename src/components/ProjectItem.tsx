@@ -29,8 +29,8 @@ const ProjectItem = ({
         backgroundImage:
           projectTheme === 'orange' ? orangeGradient : purpleGradient,
       }}>
-      <div className='relative z-10 px-10 py-10 flex gap-10 items-center'>
-        <div className='h-[560px] w-[560px] border-8 border-white rounded-lg'>
+      <div className='relative z-10 px-10 py-10 flex flex-col xl:flex-row gap-10 xl:items-center'>
+        <div className='w-full xl:h-[560px] xl:w-[560px] border-8 border-white rounded-lg'>
           <img src={projectMockup} alt='' className='w-full h-full' />
         </div>
         <div className='flex-1'>
@@ -73,7 +73,7 @@ const ProjectItem = ({
           </div>
           <div>
             <h4 className='text-2xl font-bold mt-10'>Technologies Used</h4>
-            <div className='flex gap-4 mt-5'>
+            <div className='flex flex-wrap gap-4 mt-5'>
               {technologies.map((technology) => {
                 return (
                   <img

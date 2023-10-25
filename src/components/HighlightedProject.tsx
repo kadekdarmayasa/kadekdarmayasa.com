@@ -85,7 +85,7 @@ const projects: ProjectItemType[] = [
 const HighlightedProject = () => {
   return (
     <section className='px-8 text-black mt-20'>
-      <div className='sm:container px-20'>
+      <div className='sm:container md:px-20'>
         <div>
           <h2 className='text-4xl font-bold'>✨ Highlighted Projects</h2>
           <p className='text-xl font-medium mt-6 max-w-[700px] leading-9'>
