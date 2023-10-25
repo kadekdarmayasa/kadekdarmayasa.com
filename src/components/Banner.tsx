@@ -4,8 +4,8 @@ import bannerDecoration from '../assets/images/banner-decoration.svg'
 
 const Banner = () => {
   return (
-    <section id='home' className='bg-light-gray pt-16'>
-      <div className='sm:container px-20 flex justify-between items-center'>
+    <section id='home' className='bg-light-gray pt-16 mt-20 px-8 lg:px-0'>
+      <div className='md:container md:px-20 flex justify-between items-center flex-col lg:flex-row'>
         <div className='flex-1 text-black relative'>
           <div className='relative z-20'>
             <small className='text-3xl block mb-4 font-normal'>
@@ -42,7 +42,7 @@ const Banner = () => {
             className='absolute -top-5 h-[420px]'
           />
         </div>
-        <div className='flex-1 '>
+        <div className='flex-1 relative z-30'>
           <img
             src={darmaProfile}
             alt="KadekDarmayasa's profile photo"
