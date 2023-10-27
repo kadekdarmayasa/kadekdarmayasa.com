@@ -3,7 +3,7 @@ import Contact from './Contact'
 import HighlightedProject from './HighlightedProject'
 import { useAppDispatch } from '../hooks/useAppDispatch'
 import { useAppSelector } from '../hooks/useAppSelector'
-import { close } from '../slices/NavMenuSlice'
+import { close } from '../slices/navMenuSlice'
 
 const Main = () => {
   const navMenu = useAppSelector((state) => state.navMenu.value)
