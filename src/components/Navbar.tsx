@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid'
 import { useState } from 'react'
 import menuIcon from '../assets/images/menu.svg'
-import { toggle } from '../slices/NavMenuSlice'
+import { toggle } from '../slices/navMenuSlice'
 import { useAppDispatch } from '../hooks/useAppDispatch'
 import { useAppSelector } from '../hooks/useAppSelector'
 
