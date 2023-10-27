@@ -1,24 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Navbar from './components/Navbar'
-import Banner from './components/Banner'
-import HighlightedProject from './components/HighlightedProject'
-import Certification from './components/Certification'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import './index.css'
+import App from './App'
+import { Provider } from 'react-redux'
+import { store } from './store'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <header>
-      <Navbar />
-      <Banner />
-    </header>
-    <main>
-      <HighlightedProject />
-      <Certification />
-      <Contact />
-    </main>
-    <Footer />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
 )

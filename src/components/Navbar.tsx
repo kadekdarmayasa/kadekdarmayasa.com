@@ -1,6 +1,9 @@
 import { v4 as uuidv4 } from 'uuid'
 import { useState } from 'react'
 import menuIcon from '../assets/images/menu.svg'
+import { toggle } from '../slices/NavMenuSlice'
+import { useAppDispatch } from '../hooks/useAppDispatch'
+import { useAppSelector } from '../hooks/useAppSelector'
 
 const menus = [
   {
@@ -23,7 +26,8 @@ const menus = [
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState<string>('Home')
-  const [isMenuListShown, setIsMenuListShown] = useState<boolean>(false)
+  const navMenu = useAppSelector((state) => state.navMenu.value)
+  const dispatch = useAppDispatch()
 
   return (
     <nav className='bg-light-gray/90 h-auto px-8 fixed top-0 left-0 right-0 z-40 backdrop-blur-md'>
@@ -33,12 +37,14 @@ const Navbar = () => {
         </a>
         <button
           className='border-[1px] border-slate-900 h-8 w-8 flex justify-center items-center rounded-full hover:scale-105 transition-all md:hidden'
-          onClick={() => setIsMenuListShown((prevState) => !prevState)}>
+          onClick={() => dispatch(toggle())}>
           <img src={menuIcon} alt='Click to toggle the menu list' />
         </button>
         <ul
           className={`fixed md:static md:flex items-center bg-light-gray/90 md:bg-light-gray/0 backdrop-blur-md md:backdrop-blur-0 top-20 md:top-0 z-40 md:z-auto left-0 px-8 md:px-0 right-0 origin-top ${
-            isMenuListShown ? 'scale-y-100 opacity-1' : 'scale-y-0 opacity-0'
+            navMenu === 'opened'
+              ? 'scale-y-100 opacity-1'
+              : 'scale-y-0 opacity-0'
           } transition-all md:scale-100 md:opacity-100`}>
           {menus.map((menu) => {
             return (
