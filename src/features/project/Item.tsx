@@ -1,9 +1,14 @@
 import ReactHtmlParser from 'react-html-parser'
 import { v4 as uuidv4 } from 'uuid'
+import { Blurhash } from 'react-blurhash'
+
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 import boxDecoration from '@assets/images/box-decoration.svg'
 import githubLogo from '@assets/images/github.svg'
 import launchAppIcon from '@assets/images/launch-app.svg'
+import { useState } from 'react'
 
 interface Technology {
   logo: string
@@ -36,6 +41,9 @@ const ProjectItem = ({
   projectLiveLink,
   technologies,
 }: ProjectItemProps) => {
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isLoadedStarted, setIsLoadedStarted] = useState(false)
+
   return (
     <article
       className='w-full text-black h-[auto] mb-10 rounded-xl relative'
@@ -44,12 +52,24 @@ const ProjectItem = ({
           projectTheme === 'orange' ? orangeGradient : purpleGradient,
       }}>
       <div className='relative z-10 px-4 sm:px-10 py-8 sm:py-10 flex flex-col xl:flex-row gap-10 xl:items-center'>
-        <div className='w-full xl:h-[560px] xl:w-[560px] border-8 border-white rounded-lg'>
-          <img
+        <div className='w-full h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[560px] xl:w-[560px] border-8 border-white rounded-lg relative'>
+          <LazyLoadImage
             src={projectMockup}
             alt={`Project mockup of ${projectName}`}
-            className='w-full h-full'
+            className='absolute h-full w-full'
+            onLoad={() => setIsLoaded(true)}
+            beforeLoad={() => setIsLoadedStarted(true)}
           />
+
+          {!isLoaded && isLoadedStarted && (
+            <Blurhash
+              hash='UBRp5,-;9FM__3?bM{~q00j]ITD%?cxuoe-q'
+              className='absolute align-middle'
+              height={'100%'}
+              width={'100%'}
+              punch={1}
+            />
+          )}
         </div>
         <div className='flex-1'>
           <h3
@@ -101,6 +121,7 @@ const ProjectItem = ({
                     alt={technology.name}
                     className='h-10 sm:h-12 w-10 sm:w-12'
                     key={uuidv4()}
+                    loading='lazy'
                   />
                 )
               })}

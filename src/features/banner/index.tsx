@@ -49,6 +49,7 @@ const Banner = () => {
             src={darmaProfile}
             alt="KadekDarmayasa's profile photo"
             className='w-[495px] ms-auto'
+            loading='lazy'
           />
         </div>
       </div>

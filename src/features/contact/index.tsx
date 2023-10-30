@@ -20,6 +20,7 @@ const Contact = () => {
             src={myPictureX2}
             alt='Darmayasa at his college'
             className='h-64 w-64'
+            loading='lazy'
           />
           <div>
             <p className='text-xl leading-9 mb-8 font-medium'>Contact me via</p>
