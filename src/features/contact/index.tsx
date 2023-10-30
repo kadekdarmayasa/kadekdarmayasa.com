@@ -1,6 +1,6 @@
-import myPictureX2 from '../assets/images/darma-profile-2.png'
-import emailLogo from '../assets/images/logo-email.svg'
-import instagramLogo from '../assets/images/logo-instagram.svg'
+import myPictureX2 from '@assets/images/darma-profile-2.png'
+import emailLogo from '@assets/images/logo-email.svg'
+import instagramLogo from '@assets/images/logo-instagram.svg'
 
 const Contact = () => {
   return (

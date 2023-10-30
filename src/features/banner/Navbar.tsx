@@ -1,9 +1,9 @@
 import { v4 as uuidv4 } from 'uuid'
-import { useState } from 'react'
-import menuIcon from '../assets/images/menu.svg'
-import { toggle } from '../slices/navMenuSlice'
-import { useAppDispatch } from '../hooks/useAppDispatch'
-import { useAppSelector } from '../hooks/useAppSelector'
+import { useEffect, useState } from 'react'
+import menuIcon from '@assets/images/menu.svg'
+import { toggle } from '@features/navbar/NavMenu/navMenuSlice'
+import { useAppDispatch } from '@hooks/useAppDispatch'
+import { useAppSelector } from '@hooks/useAppSelector'
 
 const menus = [
   {
@@ -25,9 +25,14 @@ const menus = [
 ]
 
 const Navbar = () => {
-  const [activeMenu, setActiveMenu] = useState<string>('Home')
+  const [activeMenuItem, setActiveMenuItem] = useState<string>('Home')
   const navMenu = useAppSelector((state) => state.navMenu.value)
+  const activeSection = useAppSelector((state) => state.activeSection.name)
   const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    setActiveMenuItem(activeSection)
+  }, [activeSection])
 
   return (
     <nav className='bg-light-gray/90 h-auto px-8 fixed top-0 left-0 right-0 z-40 backdrop-blur-md'>
@@ -50,12 +55,12 @@ const Navbar = () => {
             return (
               <li
                 key={uuidv4()}
-                className='md:ml-5'
-                onClick={() => setActiveMenu(menu.name)}>
+                className='md:ml-5 nav-link-item'
+                onClick={() => setActiveMenuItem(menu.name)}>
                 <a
                   href={`${menu.href}`}
                   className={`font-medium text-lg hover:text-purple transition-all min-h-[44px] flex md:items-center md:justify-center ${
-                    menu.name === activeMenu ? 'text-purple' : 'text-black'
+                    menu.name === activeMenuItem ? 'text-purple' : 'text-black'
                   }`}>
                   {menu.name}
                 </a>

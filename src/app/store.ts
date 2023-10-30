@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import navMenuReducer from './slices/navMenuSlice'
+import navMenuReducer from '@features/navbar/NavMenu/navMenuSlice'
+import sectionReducer from './slices/sectionSlice'
 
 export const store = configureStore({
   reducer: {
     navMenu: navMenuReducer,
+    activeSection: sectionReducer,
   },
 })
 

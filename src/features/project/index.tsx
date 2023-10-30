@@ -1,19 +1,18 @@
-import restoUpMockup from '../assets/images/mockup-restoup.png'
-import hivemindMockup from '../assets/images/mockup-hivemind.png'
-import JavaScriptLogo from '../assets/images/javascript.svg'
-import WebpackLogo from '../assets/images/webpack.svg'
-import JasmineLogo from '../assets/images/jasmine.svg'
-import CodeceptJsLogo from '../assets/images/codeceptjs.svg'
-import NextJsLogo from '../assets/images/nextjs.svg'
-import TailwindCSSLogo from '../assets/images/tailwindcss.svg'
-import JestLogo from '../assets/images/jest.svg'
-import ExpressJsLogo from '../assets/images/expressjs.svg'
-import TypescriptLogo from '../assets/images/typescript.svg'
-import PrismaLogo from '../assets/images/prisma.svg'
-
-import ProjectItem, { ProjectItemProps } from './ProjectItem'
-
 import { v4 as uuidv4 } from 'uuid'
+import ProjectItem, { ProjectItemProps } from './Item'
+
+import restoUpMockup from '@assets/images/mockup-restoup.png'
+import hivemindMockup from '@assets/images/mockup-hivemind.png'
+import JavaScriptLogo from '@assets/images/javascript.svg'
+import WebpackLogo from '@assets/images/webpack.svg'
+import JasmineLogo from '@assets/images/jasmine.svg'
+import CodeceptJsLogo from '@assets/images/codeceptjs.svg'
+import NextJsLogo from '@assets/images/nextjs.svg'
+import TailwindCSSLogo from '@assets/images/tailwindcss.svg'
+import JestLogo from '@assets/images/jest.svg'
+import ExpressJsLogo from '@assets/images/expressjs.svg'
+import TypescriptLogo from '@assets/images/typescript.svg'
+import PrismaLogo from '@assets/images/prisma.svg'
 
 const projects: ProjectItemProps[] = [
   {
@@ -85,7 +84,7 @@ const HighlightedProject = () => {
   return (
     <section
       id='projects'
-      className='px-8 text-black mt-16 sm:mt-20 scroll-mt-32'>
+      className='px-8 text-black mt-16 sm:mt-20 scroll-mt-32 relative z-20 h-auto'>
       <div className='sm:container md:px-20'>
         <div>
           <h2 className='text-3xl sm:text-4xl font-bold'>

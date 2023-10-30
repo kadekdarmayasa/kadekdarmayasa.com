@@ -1,9 +1,9 @@
 import ReactHtmlParser from 'react-html-parser'
 import { v4 as uuidv4 } from 'uuid'
 
-import boxDecoration from '../assets/images/box-decoration.svg'
-import githubLogo from '../assets/images/github.svg'
-import launchAppIcon from '../assets/images/launch-app.svg'
+import boxDecoration from '@assets/images/box-decoration.svg'
+import githubLogo from '@assets/images/github.svg'
+import launchAppIcon from '@assets/images/launch-app.svg'
 
 interface Technology {
   logo: string
@@ -45,7 +45,11 @@ const ProjectItem = ({
       }}>
       <div className='relative z-10 px-4 sm:px-10 py-8 sm:py-10 flex flex-col xl:flex-row gap-10 xl:items-center'>
         <div className='w-full xl:h-[560px] xl:w-[560px] border-8 border-white rounded-lg'>
-          <img src={projectMockup} alt='' className='w-full h-full' />
+          <img
+            src={projectMockup}
+            alt={`Project mockup of ${projectName}`}
+            className='w-full h-full'
+          />
         </div>
         <div className='flex-1'>
           <h3

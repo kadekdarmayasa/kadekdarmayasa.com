@@ -1,11 +1,11 @@
-import { CertificationItemProps } from '../components/CertificationItem'
+import { CertificationItemProps } from '@features/certification/Item'
 
-import javascriptCertification from '../assets/images/certifications/belajar-dasar-pemrograman-javascript.png'
-import webProgrammingCertification from '../assets/images/certifications/belajar-dasar-pemrograman-web.png'
-import frontendFundamentalCertification from '../assets/images/certifications/belajar-fundamental-frontend-web.png'
-import frontendWebBeginnerCertification from '../assets/images/certifications/belajar-membuat-frontend-web-untuk-pemula.png'
-import frontendWebExpertCertification from '../assets/images/certifications/menjadi-frontend-web-developer-expert.png'
-import backendWebBeginnerCertification from '../assets/images/certifications/belajar-membuat-aplikasi-backend-untuk-pemula.png'
+import javascriptCertification from '@assets/images/certifications/belajar-dasar-pemrograman-javascript.png'
+import webProgrammingCertification from '@assets/images/certifications/belajar-dasar-pemrograman-web.png'
+import frontendFundamentalCertification from '@assets/images/certifications/belajar-fundamental-frontend-web.png'
+import frontendWebBeginnerCertification from '@assets/images/certifications/belajar-membuat-frontend-web-untuk-pemula.png'
+import frontendWebExpertCertification from '@assets/images/certifications/menjadi-frontend-web-developer-expert.png'
+import backendWebBeginnerCertification from '@assets/images/certifications/belajar-membuat-aplikasi-backend-untuk-pemula.png'
 
 const certifications: CertificationItemProps[] = [
   {
