@@ -1,14 +1,12 @@
+import { useState } from 'react'
 import ReactHtmlParser from 'react-html-parser'
 import { v4 as uuidv4 } from 'uuid'
 import { Blurhash } from 'react-blurhash'
-
 import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
 
 import boxDecoration from '@assets/images/box-decoration.svg'
 import githubLogo from '@assets/images/github.svg'
 import launchAppIcon from '@assets/images/launch-app.svg'
-import { useState } from 'react'
 
 interface Technology {
   logo: string
@@ -52,7 +50,7 @@ const ProjectItem = ({
           projectTheme === 'orange' ? orangeGradient : purpleGradient,
       }}>
       <div className='relative z-10 px-4 sm:px-10 py-8 sm:py-10 flex flex-col xl:flex-row gap-10 xl:items-center'>
-        <div className='w-full h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[560px] xl:w-[560px] border-8 border-white rounded-lg relative'>
+        <div className='w-full mobile-xs:h-[240px] mobile-md:h-[350px] mobile-lg:h-[450px] sm:h-[500px] lg:h-[600px] xl:h-[560px] xl:w-[560px] border-8 border-white rounded-lg relative'>
           <LazyLoadImage
             src={projectMockup}
             alt={`Project mockup of ${projectName}`}

@@ -1,5 +1,8 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
+
 import linkedinIcon from '@assets/images/linkedin.svg'
-import darmaProfile from '@assets/images/darma-profile.png'
+import darmaProfile from '@assets/images/darma-profile-ai.png'
 import bannerDecoration from '@assets/images/banner-decoration.svg'
 
 const Banner = () => {
@@ -44,13 +47,17 @@ const Banner = () => {
             className='absolute -top-5 h-[420px]'
           />
         </div>
-        <div className='flex-1 relative z-30'>
-          <img
-            src={darmaProfile}
-            alt="KadekDarmayasa's profile photo"
-            className='w-[495px] ms-auto'
-            loading='lazy'
-          />
+        <div className='flex-1 relative z-30 flex items-end justify-end'>
+          <div className='relative ms-auto w-[300px] h-[400px] mobile-md:w-[400px] mobile-md:h-[500px] lg:h-[600px] lg:w-[500px]'>
+            <LazyLoadImage
+              src={darmaProfile}
+              placeholderSrc={darmaProfile}
+              alt="KadekDarmayasa's profile photo"
+              className='w-full absolute align-bottom bottom-0'
+              effect='blur'
+              visibleByDefault={!!darmaProfile}
+            />
+          </div>
         </div>
       </div>
     </section>

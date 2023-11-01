@@ -1,4 +1,4 @@
-import myPictureX2 from '@assets/images/darma-profile-2.png'
+import darmaProfile2 from '@assets/images/darma-profile-2.png'
 import emailLogo from '@assets/images/logo-email.svg'
 import instagramLogo from '@assets/images/logo-instagram.svg'
 
@@ -17,7 +17,7 @@ const Contact = () => {
 
         <div className='flex mt-12 md:mt-24 gap-10 flex-col md:flex-row md:items-center'>
           <img
-            src={myPictureX2}
+            src={darmaProfile2}
             alt='Darmayasa at his college'
             className='h-64 w-64'
             loading='lazy'

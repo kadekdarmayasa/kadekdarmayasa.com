@@ -41,7 +41,7 @@ const Certification = () => {
           </p>
         </div>
         <div className='mt-10'>
-          <Slider {...settings}>
+          <Slider {...settings} className='relative'>
             {certifications.map((certification) => {
               return (
                 <CertificationItem
