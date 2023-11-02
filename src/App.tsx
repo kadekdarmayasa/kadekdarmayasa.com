@@ -1,16 +1,16 @@
 import React, { useEffect, useCallback } from 'react'
-import { active } from './app/slices/sectionSlice'
-import { SectionProps } from './app/slices/sectionSlice'
-import { useAppDispatch } from './hooks/useAppDispatch'
-import { useAppSelector } from './hooks/useAppSelector'
-import { close } from './features/navbar/NavMenu/navMenuSlice'
-import Navbar from './features/navbar'
-import Banner from './features/banner'
+import { active } from '@app/slices/sectionSlice'
+import { SectionProps } from '@app/slices/sectionSlice'
+import { useAppDispatch } from '@hooks/useAppDispatch'
+import { useAppSelector } from '@hooks/useAppSelector'
+import { close } from '@features/navbar/NavMenu/navMenuSlice'
+import Navbar from '@features/navbar'
+import Banner from '@features/banner'
+import HighlightedProject from '@features/project'
+import Certification from '@features/certification'
+import Contact from '@features/contact'
+import Footer from '@features/footer'
 import './index.css'
-import HighlightedProject from './features/project'
-import Certification from './features/certification'
-import Contact from './features/contact'
-import Footer from './features/footer'
 
 const App = () => {
   const dispatch = useAppDispatch()
@@ -25,9 +25,9 @@ const App = () => {
     ]
 
     sections.forEach((section) => {
-      const element = document.getElementById(section.id)
+      const sectionElement = document.getElementById(section.id)
 
-      if (element && window.scrollY >= element.offsetTop - 360) {
+      if (sectionElement && window.scrollY >= sectionElement.offsetTop - 360) {
         dispatch(
           active({
             id: section.id,

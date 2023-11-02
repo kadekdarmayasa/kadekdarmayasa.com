@@ -39,8 +39,8 @@ const ProjectItem = ({
   projectLiveLink,
   technologies,
 }: ProjectItemProps) => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isLoadedStarted, setIsLoadedStarted] = useState(false)
+  const [isLoadEnd, setLoadEnd] = useState(false)
+  const [isLoadBegin, setLoadBegin] = useState(false)
 
   return (
     <article
@@ -55,11 +55,11 @@ const ProjectItem = ({
             src={projectMockup}
             alt={`Project mockup of ${projectName}`}
             className='absolute h-full w-full'
-            onLoad={() => setIsLoaded(true)}
-            beforeLoad={() => setIsLoadedStarted(true)}
+            onLoad={() => setLoadEnd(true)}
+            beforeLoad={() => setLoadBegin(true)}
           />
 
-          {!isLoaded && isLoadedStarted && (
+          {!isLoadEnd && isLoadBegin && (
             <Blurhash
               hash='UBRp5,-;9FM__3?bM{~q00j]ITD%?cxuoe-q'
               className='absolute align-middle'
@@ -104,6 +104,7 @@ const ProjectItem = ({
                 src={githubLogo}
                 alt='Source code saved on github'
                 className='group-hover:scale-90'
+                loading='lazy'
               />
             </a>
           </div>
@@ -133,8 +134,8 @@ const ProjectItem = ({
           backgroundImage:
             projectTheme === 'orange' ? orangeGradient : purpleGradient,
         }}>
-        <img src={boxDecoration} alt='' className='absolute top-0' />
-        <img src={boxDecoration} alt='' className='absolute bottom-0 right-0' />
+        <img src={boxDecoration} className='absolute top-0' />
+        <img src={boxDecoration} className='absolute bottom-0 right-0' />
       </div>
     </article>
   )

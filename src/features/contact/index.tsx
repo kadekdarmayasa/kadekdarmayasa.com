@@ -35,6 +35,7 @@ const Contact = () => {
                     src={emailLogo}
                     alt='Darmayasa`s email address'
                     className='w-6 h-6'
+                    loading='lazy'
                   />
                 </div>
                 <span className='text-md sm:text-xl leading-9 font-regular text-purple'>
@@ -51,6 +52,7 @@ const Contact = () => {
                     src={instagramLogo}
                     alt='Darmayasa`s instagram account'
                     className='w-6 h-6'
+                    loading='lazy'
                   />
                 </div>
                 <span className='text-md sm:text-xl leading-9 font-regular text-purple'>

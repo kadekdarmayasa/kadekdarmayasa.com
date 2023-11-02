@@ -1,25 +1,7 @@
 import { useState, useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { useAppSelector } from '@hooks/useAppSelector'
-
-const menus = [
-  {
-    name: 'Home',
-    href: '#home',
-  },
-  {
-    name: 'Projects',
-    href: '#projects',
-  },
-  {
-    name: 'Certifications',
-    href: '#certifications',
-  },
-  {
-    name: 'Contact Me',
-    href: '#contact',
-  },
-]
+import { menus } from '@data/menu'
 
 const NavMenu = () => {
   const [activeMenuItem, setActiveMenuItem] = useState<string>('Home')

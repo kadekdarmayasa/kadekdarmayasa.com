@@ -1,10 +1,9 @@
+import { v4 as uuidv4 } from 'uuid'
+import CertificationItem from './Item'
+import { certifications } from '@data/certifications'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { v4 as uuidv4 } from 'uuid'
-
-import CertificationItem from './Item'
-import { certifications } from '@data/certifications'
 
 const Certification = () => {
   const settings = {
