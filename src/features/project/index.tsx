@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from 'uuid'
 import ProjectItem from './Item'
 import { projects } from '@data/projects'
 
@@ -18,9 +17,9 @@ const HighlightedProject = () => {
           </p>
         </div>
         <div className='mt-10'>
-          {projects.map((project) => (
-            <ProjectItem key={uuidv4()} {...project} />
-          ))}
+          {projects.map((project) => {
+            return <ProjectItem {...project} key={project.id} />
+          })}
         </div>
       </div>
     </section>

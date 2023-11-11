@@ -9,6 +9,7 @@
     font-family: 'Figtree', system-ui, sans-serif;
     font-display: swap;
     scroll-behavior: smooth;
+    min-height: 100vh;
   }
 }
 

@@ -14,7 +14,7 @@ const NavMenu = () => {
 
   return (
     <ul
-      className={`fixed md:static md:flex items-center bg-light-gray/90 md:bg-light-gray/0 backdrop-blur-md md:backdrop-blur-0 top-20 md:top-0 z-40 md:z-auto left-0 px-8 md:px-0 right-0 origin-top ${
+      className={`fixed md:static md:flex items-center mobile-xs:max-md:bg-light-gray/90 mobile-xs:max-md:backdrop-blur-lg top-20 md:top-0 z-40 md:z-auto left-0 px-8 md:px-0 right-0 origin-top ${
         navMenu === 'opened' ? 'scale-y-100 opacity-1' : 'scale-y-0 opacity-0'
       } transition-all md:scale-100 md:opacity-100`}>
       {menus.map((menu) => {

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import ReactHtmlParser from 'react-html-parser'
 import { v4 as uuidv4 } from 'uuid'
 import { Blurhash } from 'react-blurhash'
@@ -14,6 +15,7 @@ interface Technology {
 }
 
 export interface ProjectItemProps {
+  id: string
   projectMockup: string
   projectName: string
   projectDescription: string

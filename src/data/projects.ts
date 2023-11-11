@@ -15,6 +15,7 @@ import PrismaLogo from '@assets/images/prisma.svg'
 
 const projects: ProjectItemProps[] = [
   {
+    id: '001',
     projectMockup: restoUpMockup,
     projectName: 'RestoUp',
     projectDescription:
@@ -43,6 +44,7 @@ const projects: ProjectItemProps[] = [
     ],
   },
   {
+    id: '002',
     projectMockup: hivemindMockup,
     projectName: 'Hivemind',
     projectDescription:
