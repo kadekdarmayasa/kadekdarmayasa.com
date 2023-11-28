@@ -24,7 +24,7 @@ const Banner = () => {
             </p>
             <div className='flex gap-4 sm:gap-8'>
               <a
-                href='https://drive.google.com/file/d/1DiSVlg5RyRGtcs0AFn1-GLl3f59Ockam/view?usp=sharing'
+                href='https://drive.google.com/file/d/1E51-6vyi-0YBYFFUrGlWIWY5_WrS38qG/view?usp=sharing'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='w-52 h-12 rounded-md font-medium flex items-center justify-center text-center bg-purple text-white hover:shadow-xl hover:shadow-purple/10 transition-all'>
