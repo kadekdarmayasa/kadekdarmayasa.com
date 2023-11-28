@@ -21,7 +21,7 @@ const NavMenu = () => {
         return (
           <li
             key={uuidv4()}
-            className='md:ml-5 nav-link-item'
+            className='md:ml-5'
             onClick={() => setActiveMenuItem(menu.name)}>
             <a
               href={`${menu.href}`}

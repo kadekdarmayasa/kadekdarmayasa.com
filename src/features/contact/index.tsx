@@ -1,6 +1,4 @@
 import darmaProfile2 from '@assets/images/darma-profile-2.png'
-import emailLogo from '@assets/images/logo-email.svg'
-import instagramLogo from '@assets/images/logo-instagram.svg'
 
 const Contact = () => {
   return (
@@ -30,13 +28,8 @@ const Contact = () => {
                 className='flex items-center group mb-2'
                 rel='noopener noreferrer'
                 target='_blank'>
-                <div className='border-purple border-[1px] w-10 h-10 rounded-md flex items-center justify-center group-hover:bg-purple/5 transition-all mr-4'>
-                  <img
-                    src={emailLogo}
-                    alt='Darmayasa`s email address'
-                    className='w-6 h-6'
-                    loading='lazy'
-                  />
+                <div className='border-purple border-[1px] w-10 h-10 rounded-md flex items-center justify-center transition-all mr-4 group group-hover:bg-purple'>
+                  <i className='bx bxl-gmail text-purple text-2xl group-hover:text-white' />
                 </div>
                 <span className='text-md sm:text-xl leading-9 font-regular text-purple'>
                   darmayasadiputra@gmail.com
@@ -47,13 +40,8 @@ const Contact = () => {
                 target='_blank'
                 rel='noopener noreferrer'
                 className='flex items-center group'>
-                <div className='border-purple border-[1px] w-10 h-10 rounded-md flex items-center justify-center group-hover:bg-purple/5 transition-all mr-4'>
-                  <img
-                    src={instagramLogo}
-                    alt='Darmayasa`s instagram account'
-                    className='w-6 h-6'
-                    loading='lazy'
-                  />
+                <div className='border-purple border-[1px] w-10 h-10 rounded-md flex items-center justify-center group-hover:bg-purple transition-all mr-4'>
+                  <i className='bx bxl-instagram text-3xl group-hover:text-white text-purple'></i>
                 </div>
                 <span className='text-md sm:text-xl leading-9 font-regular text-purple'>
                   @kadekdarmayasaa

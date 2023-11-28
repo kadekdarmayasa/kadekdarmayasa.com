@@ -11,6 +11,8 @@ import Certification from '@features/certification'
 import Contact from '@features/contact'
 import Footer from '@features/footer'
 import './index.css'
+import 'boxicons'
+import 'boxicons/css/boxicons.min.css'
 
 const App = () => {
   const dispatch = useAppDispatch()

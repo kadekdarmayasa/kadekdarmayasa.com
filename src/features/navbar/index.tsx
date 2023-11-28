@@ -1,6 +1,5 @@
 import NavMenu from './NavMenu'
 import { toggle } from './NavMenu/navMenuSlice'
-import menuIcon from '@assets/images/menu.svg'
 import { useAppDispatch } from '@hooks/useAppDispatch'
 import { useAppSelector } from '@hooks/useAppSelector'
 
@@ -18,9 +17,9 @@ const Navbar = () => {
           DARMA<span className='text-purple'>.</span>
         </a>
         <button
-          className='border-[1px] border-slate-900 h-8 w-8 flex justify-center items-center rounded-full hover:scale-105 transition-all md:hidden'
+          className='border-[1px] border-slate-900  h-8 w-8 flex justify-center items-center rounded-full hover:scale-105 transition-all md:hidden'
           onClick={() => dispatch(toggle())}>
-          <img src={menuIcon} alt='Click to toggle the menu list' />
+          <i className='bx bx-menu text-slate-900 text-2xl' />
         </button>
         <NavMenu />
       </div>

@@ -1,7 +1,6 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
-import linkedinIcon from '@assets/images/linkedin.svg'
 import darmaProfile from '@assets/images/darma-profile-ai.png'
 import bannerDecoration from '@assets/images/banner-decoration.svg'
 
@@ -20,8 +19,8 @@ const Banner = () => {
               full-stack <span className='text-purple'>web developer</span>
             </h1>
             <p className='text-lg sm:text-xl leading-9 mb-8 font-medium max-w-[640px]'>
-              I have more than 1.5 years experience in building and maintaining
-              web applications.{' '}
+              I have years of experience in building and maintaining web
+              applications.{' '}
             </p>
             <div className='flex gap-4 sm:gap-8'>
               <a
@@ -35,17 +34,13 @@ const Banner = () => {
                 href='https://linkedin.com/in/kadekdarmayasa'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='border-purple border-[1px] w-12 h-12 rounded-md flex items-center justify-center hover:bg-purple/5 transition-all'>
-                <img src={linkedinIcon} alt="KadekDarmayasa's linkedin" />
+                className='border-purple border-[1px] w-12 h-12 rounded-md flex items-center justify-center group hover:bg-purple/5 transition-all hover:bg-purple'>
+                <i className='bx bxl-linkedin text-purple text-3xl group-hover:text-white' />
               </a>
             </div>
           </div>
           <div className='absolute w-full h-[420px] bg-light-gray/80 -top-5 z-10'></div>
-          <img
-            src={bannerDecoration}
-            alt=''
-            className='absolute -top-5 h-[420px]'
-          />
+          <img src={bannerDecoration} className='absolute -top-5 h-[420px]' />
         </div>
         <div className='flex-1 relative z-30 flex items-end justify-end'>
           <div className='relative ms-auto w-[300px] h-[400px] mobile-md:w-[400px] mobile-md:h-[500px] lg:h-[600px] lg:w-[500px]'>
