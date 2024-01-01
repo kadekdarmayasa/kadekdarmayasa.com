@@ -1,5 +1,3 @@
-import 'bootstrap'
-
 import React, { useEffect, useCallback } from 'react'
 import { active } from '@app/slices/sectionSlice'
 import { SectionProps } from '@app/slices/sectionSlice'
