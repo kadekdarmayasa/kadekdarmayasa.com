@@ -11,7 +11,8 @@
       "@assets/*": ["./assets/*"],
       "@hooks/*": ["./hooks/*"],
       "@data/*": ["./data/*"],
-      "@app/*": ["./app/*"]
+      "@app/*": ["./app/*"],
+      "@config/*": ["./config/*"]
     }
   },
   "include": ["vite.config.ts", "tsconfig.json"]

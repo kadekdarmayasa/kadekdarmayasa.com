@@ -4,6 +4,8 @@ import ReactHtmlParser from 'react-html-parser'
 import { v4 as uuidv4 } from 'uuid'
 import { Blurhash } from 'react-blurhash'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import { Tilt } from 'react-tilt'
+import { tilt } from '@config/tilt'
 
 import boxDecoration from '@assets/images/box-decoration.svg'
 import githubLogo from '@assets/images/github.svg'
@@ -26,11 +28,6 @@ export interface ProjectItemProps {
   technologies: Technology[]
 }
 
-const orangeGradient =
-  'linear-gradient(90deg, rgba(255, 152, 88, 0.50) 0.13%, rgba(255, 152, 88, 0.25) 52.08%, rgba(255, 152, 88, 0.50) 99.86%)'
-const purpleGradient =
-  'linear-gradient(90deg, rgba(43, 59, 229, 0.50) 0.13%, rgba(43, 59, 229, 0.25) 52.08%, rgba(43, 59, 229, 0.50) 99.86%)'
-
 const ProjectItem = ({
   projectMockup,
   projectName,
@@ -45,11 +42,11 @@ const ProjectItem = ({
   const [isLoadBegin, setLoadBegin] = useState(false)
 
   return (
-    <article
+    <Tilt
+      options={{ ...tilt, max: 25 }}
       className='w-full text-black h-[auto] mb-10 rounded-xl relative'
       style={{
-        backgroundImage:
-          projectTheme === 'orange' ? orangeGradient : purpleGradient,
+        backgroundImage: projectTheme,
       }}>
       <div className='relative z-10 px-4 sm:px-10 py-8 sm:py-10 flex flex-col xl:flex-row gap-10 xl:items-center'>
         <div className='w-full mobile-xs:h-[240px] mobile-md:h-[350px] mobile-lg:h-[450px] sm:h-[500px] lg:h-[600px] xl:h-[560px] xl:w-[560px] border-8 border-white rounded-lg relative'>
@@ -133,13 +130,12 @@ const ProjectItem = ({
       <div
         className='flex justify-between absolute top-0 left-0 right-0 bottom-0 rounded-xl'
         style={{
-          backgroundImage:
-            projectTheme === 'orange' ? orangeGradient : purpleGradient,
+          backgroundImage: projectTheme,
         }}>
         <img src={boxDecoration} className='absolute top-0' />
         <img src={boxDecoration} className='absolute bottom-0 right-0' />
       </div>
-    </article>
+    </Tilt>
   )
 }
 

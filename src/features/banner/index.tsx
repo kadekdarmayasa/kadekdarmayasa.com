@@ -1,6 +1,9 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
+import { Tilt } from 'react-tilt'
+import { tilt } from '@config/tilt'
+
 import darmaProfile from '@assets/images/darma-profile-ai.png'
 import bannerDecoration from '@assets/images/banner-decoration.svg'
 
@@ -23,20 +26,24 @@ const Banner = () => {
               applications.{' '}
             </p>
             <div className='flex gap-4 sm:gap-8'>
-              <a
-                href='https://drive.google.com/file/d/1E51-6vyi-0YBYFFUrGlWIWY5_WrS38qG/view?usp=sharing'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='w-52 h-12 rounded-md font-medium flex items-center justify-center text-center bg-purple text-white hover:shadow-xl hover:shadow-purple/10 transition-all'>
-                Download Resume
-              </a>
-              <a
-                href='https://linkedin.com/in/kadekdarmayasa'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='border-purple border-[1px] w-12 h-12 rounded-md flex items-center justify-center group hover:bg-purple/5 transition-all hover:bg-purple'>
-                <i className='bx bxl-linkedin text-purple text-3xl group-hover:text-white' />
-              </a>
+              <Tilt options={{ ...tilt, axis: false }}>
+                <a
+                  href='https://drive.google.com/file/d/1E51-6vyi-0YBYFFUrGlWIWY5_WrS38qG/view?usp=sharing'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-52 h-12 rounded-md font-medium flex items-center justify-center text-center bg-purple text-white hover:shadow-xl hover:shadow-purple/10 transition-all'>
+                  Download Resume
+                </a>
+              </Tilt>
+              <Tilt options={{ ...tilt, axis: false }}>
+                <a
+                  href='https://linkedin.com/in/kadekdarmayasa'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='border-purple border-[1px] w-12 h-12 rounded-md flex items-center justify-center group transition-all hover:bg-purple'>
+                  <i className='bx bxl-linkedin text-purple text-3xl group-hover:text-white' />
+                </a>
+              </Tilt>
             </div>
           </div>
           <div className='absolute w-full h-[420px] bg-light-gray/80 -top-5 z-10'></div>

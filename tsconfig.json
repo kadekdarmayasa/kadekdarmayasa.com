@@ -26,7 +26,8 @@
       "@assets/*": ["./assets/*"],
       "@hooks/*": ["./hooks/*"],
       "@data/*": ["./data/*"],
-      "@app/*": ["./app/*"]
+      "@app/*": ["./app/*"],
+      "@config/*": ["./config/*"]
     },
 
     "sourceMap": true
