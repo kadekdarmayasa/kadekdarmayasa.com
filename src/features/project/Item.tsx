@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import 'react-lazy-load-image-component/src/effects/blur.css'
-import ReactHtmlParser from 'react-html-parser'
+import parse from "html-react-parser";
 import { v4 as uuidv4 } from 'uuid'
 import { Blurhash } from 'react-blurhash'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
@@ -76,7 +76,7 @@ const ProjectItem = ({
             {projectName}
           </h3>
           <p className='max-w-[650px] text-lg  sm:text-xl font-medium text-black leading-9 my-5'>
-            {ReactHtmlParser(projectDescription)}
+            {parse(projectDescription)}
           </p>
           <div className='flex gap-4'>
             {isLive ? (
