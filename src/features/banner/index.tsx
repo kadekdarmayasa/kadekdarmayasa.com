@@ -7,6 +7,22 @@ import { tilt } from '@config/tilt'
 import darmaProfile from '@assets/images/darma-profile-ai.png'
 import bannerDecoration from '@assets/images/banner-decoration.svg'
 
+const skills = [
+  'Laravel',
+  'PHP',
+  'React',
+  'Next.js',
+  'TypeScript',
+  'MySQL',
+  'Docker',
+]
+
+const focusAreas = [
+  'Web Development',
+  'Backend Development',
+  'System Architecture',
+]
+
 const Banner = () => {
   return (
     <section
@@ -22,8 +38,9 @@ const Banner = () => {
               full-stack <span className='text-purple'>web developer</span>
             </h1>
             <p className='text-lg sm:text-xl leading-9 mb-8 font-medium max-w-[640px]'>
-              I have years of experience in building and maintaining web
-              applications.{' '}
+              Software Engineer with hands-on experience building and
+              maintaining business applications for the travel and ticketing
+              industry.
             </p>
             <div className='flex gap-4 sm:gap-8'>
               <Tilt options={{ ...tilt, axis: false }}>
@@ -45,6 +62,32 @@ const Banner = () => {
                   <i className='bx bxl-linkedin text-purple text-3xl group-hover:text-white' />
                 </a>
               </Tilt>
+            </div>
+            <div className='mt-12 max-w-[640px]'>
+              <h3 className='text-sm uppercase tracking-widest font-semibold mb-3'>
+                Skills
+              </h3>
+              <div className='flex flex-wrap gap-2 mb-6'>
+                {skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className='px-3 py-1 rounded-full text-purple bg-purple/10 text-sm font-semibold'>
+                    {skill}
+                  </span>
+                ))}
+              </div>
+              <h3 className='text-sm uppercase tracking-widest font-semibold mb-3'>
+                Focus Areas
+              </h3>
+              <div className='flex flex-wrap gap-2'>
+                {focusAreas.map((area) => (
+                  <span
+                    key={area}
+                    className='px-3 py-1 rounded-full text-purple bg-purple/10 text-sm font-semibold'>
+                    {area}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
           <div className='absolute w-full h-[420px] bg-light-gray/80 -top-5 z-10'></div>
