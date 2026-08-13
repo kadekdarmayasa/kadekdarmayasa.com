@@ -4,7 +4,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css'
 import { Tilt } from 'react-tilt'
 import { tilt } from '@config/tilt'
 
-import darmaProfile from '@assets/images/darma-profile-ai.png'
+import darmaProfile from '@assets/images/photo-profile.png'
 import bannerDecoration from '@assets/images/banner-decoration.svg'
 
 const skills = [
@@ -94,7 +94,7 @@ const Banner = () => {
           <img src={bannerDecoration} className='absolute -top-5 h-[420px]' />
         </div>
         <div className='flex-1 relative z-30 flex items-end justify-end'>
-          <div className='relative ms-auto w-[300px] h-[400px] mobile-md:w-[400px] mobile-md:h-[500px] lg:h-[600px] lg:w-[500px]'>
+          <div className='relative ms-auto w-[300px] h-[500px] mobile-md:w-[400px] mobile-md:h-[600px] lg:h-[700px] lg:w-[500px]'>
             <LazyLoadImage
               src={darmaProfile}
               placeholderSrc={darmaProfile}
