@@ -4,24 +4,8 @@ import 'react-lazy-load-image-component/src/effects/blur.css'
 import { Tilt } from 'react-tilt'
 import { tilt } from '@config/tilt'
 
-import darmaProfile from '@assets/images/photo-profile.png'
+import darmaProfile from '@assets/images/darma-profile-ai.png'
 import bannerDecoration from '@assets/images/banner-decoration.svg'
-
-const skills = [
-  'Laravel',
-  'PHP',
-  'React',
-  'Next.js',
-  'TypeScript',
-  'MySQL',
-  'Docker',
-]
-
-const focusAreas = [
-  'Web Development',
-  'Backend Development',
-  'System Architecture',
-]
 
 const Banner = () => {
   return (
@@ -63,38 +47,12 @@ const Banner = () => {
                 </a>
               </Tilt>
             </div>
-            <div className='mt-12 max-w-[640px]'>
-              <h3 className='text-sm uppercase tracking-widest font-semibold mb-3'>
-                Skills
-              </h3>
-              <div className='flex flex-wrap gap-2 mb-6'>
-                {skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className='px-3 py-1 rounded-full text-purple bg-purple/10 text-sm font-semibold'>
-                    {skill}
-                  </span>
-                ))}
-              </div>
-              <h3 className='text-sm uppercase tracking-widest font-semibold mb-3'>
-                Focus Areas
-              </h3>
-              <div className='flex flex-wrap gap-2'>
-                {focusAreas.map((area) => (
-                  <span
-                    key={area}
-                    className='px-3 py-1 rounded-full text-purple bg-purple/10 text-sm font-semibold'>
-                    {area}
-                  </span>
-                ))}
-              </div>
-            </div>
           </div>
           <div className='absolute w-full h-[420px] bg-light-gray/80 -top-5 z-10'></div>
           <img src={bannerDecoration} className='absolute -top-5 h-[420px]' />
         </div>
         <div className='flex-1 relative z-30 flex items-end justify-end'>
-          <div className='relative ms-auto w-[300px] h-[500px] mobile-md:w-[400px] mobile-md:h-[600px] lg:h-[700px] lg:w-[500px]'>
+          <div className='relative ms-auto w-[300px] h-[400px] mobile-md:w-[400px] mobile-md:h-[500px] lg:h-[600px] lg:w-[500px]'>
             <LazyLoadImage
               src={darmaProfile}
               placeholderSrc={darmaProfile}

@@ -50,7 +50,7 @@ const ProjectItem = ({
   return (
     <Tilt
       options={{ ...tilt, max: 25 }}
-      className='w-full text-black h-[auto] mb-10 rounded-xl relative'
+      className='w-full text-black h-[auto] mb-10 rounded-xl relative overflow-hidden'
       style={{ backgroundImage: themeBackground }}>
       <div className='relative z-10 px-4 sm:px-10 py-8 sm:py-10 flex flex-col xl:flex-row gap-10 xl:items-center'>
         <div className='w-full mobile-xs:h-[240px] mobile-md:h-[350px] mobile-lg:h-[450px] sm:h-[500px] lg:h-[600px] xl:h-[560px] xl:w-[560px] border-8 border-white rounded-lg relative'>
