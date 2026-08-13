@@ -28,11 +28,12 @@ const Banner = () => {
             <div className='flex gap-4 sm:gap-8'>
               <Tilt options={{ ...tilt, axis: false }}>
                 <a
-                  href='https://drive.google.com/file/d/1E51-6vyi-0YBYFFUrGlWIWY5_WrS38qG/view?usp=sharing'
+                  href='https://drive.google.com/file/d/1qc8iqdHqQiMPZaq3g-Xf44XRJIPoiVEw/view?usp=sharing'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='w-52 h-12 rounded-md font-medium flex items-center justify-center text-center bg-purple text-white hover:shadow-xl hover:shadow-purple/10 transition-all'>
-                  Download Resume
+                  className='w-52 h-12 rounded-md font-medium flex items-center justify-center gap-2 text-center bg-purple text-white hover:shadow-xl hover:shadow-purple/10 transition-all'>
+                  <i className='bx bx-download text-xl' />
+                  Download CV
                 </a>
               </Tilt>
               <Tilt options={{ ...tilt, axis: false }}>
