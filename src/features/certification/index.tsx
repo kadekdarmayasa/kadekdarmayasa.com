@@ -28,8 +28,8 @@ const Certification = () => {
   return (
     <section
       id='certifications'
-      className='px-8 text-black mt-20 bg-light-gray scroll-mt-20'>
-      <div className='sm:container md:px-20 py-20'>
+      className='px-8 text-black mt-20 bg-white scroll-mt-20'>
+      <div className='sm:container md:px-20'>
         <div>
           <h2 className='text-3xl sm:text-4xl font-bold'>
             🚀 Certifications Earned

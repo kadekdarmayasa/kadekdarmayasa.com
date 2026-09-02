@@ -5,7 +5,7 @@ const HighlightedProject = () => {
   return (
     <section
       id='projects'
-      className='px-8 text-black mt-16 sm:mt-20 scroll-mt-32 relative z-20 h-auto'>
+      className='px-8 py-16 text-black mt-16 sm:mt-20 bg-light-gray scroll-mt-32 relative z-20 h-auto'>
       <div className='sm:container md:px-20'>
         <div>
           <h2 className='text-3xl sm:text-4xl font-bold'>
