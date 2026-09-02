@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 export interface SectionProps {
-  id: 'home' | 'projects' | 'certifications' | 'contact'
-  name: 'Home' | 'Projects' | 'Certifications' | 'Contact Me'
+  id: 'home' | 'skills' | 'projects' | 'certifications' | 'contact'
+  name: 'Home' | 'Skills' | 'Projects' | 'Certifications' | 'Contact Me'
 }
 
 const initialState: SectionProps = {

@@ -4,6 +4,10 @@ const menus = [
     href: '#home',
   },
   {
+    name: 'Skills',
+    href: '#skills',
+  },
+  {
     name: 'Projects',
     href: '#projects',
   },

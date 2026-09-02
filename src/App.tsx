@@ -6,6 +6,7 @@ import { useAppSelector } from '@hooks/useAppSelector'
 import { close } from '@features/navbar/NavMenu/navMenuSlice'
 import Navbar from '@features/navbar'
 import Banner from '@features/banner'
+import Skills from '@features/skills'
 import HighlightedProject from '@features/project'
 import Certification from '@features/certification'
 import Contact from '@features/contact'
@@ -21,6 +22,7 @@ const App = () => {
   const handleScroll = useCallback(() => {
     const sections: SectionProps[] = [
       { id: 'home', name: 'Home' },
+      { id: 'skills', name: 'Skills' },
       { id: 'projects', name: 'Projects' },
       { id: 'certifications', name: 'Certifications' },
       { id: 'contact', name: 'Contact Me' },
@@ -51,6 +53,7 @@ const App = () => {
         <Banner />
       </header>
       <main onClick={() => navMenu === 'opened' && dispatch(close())}>
+        <Skills />
         <HighlightedProject />
         <Certification />
         <Contact />
