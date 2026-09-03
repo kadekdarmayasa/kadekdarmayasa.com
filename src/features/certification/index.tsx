@@ -1,11 +1,10 @@
-import { v4 as uuidv4 } from 'uuid'
-import CertificationItem from './Item'
-import { certifications } from '@data/certifications'
+import AchievementItem from './Item'
+import { achievements } from '@data/certifications'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-const Certification = () => {
+const Achievements = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -27,26 +26,22 @@ const Certification = () => {
 
   return (
     <section
-      id='certifications'
-      className='px-8 text-black mt-20 bg-white scroll-mt-20'>
+      id='achievements'
+      className='mt-20 bg-white px-8 py-16 text-black scroll-mt-20'>
       <div className='sm:container md:px-20'>
         <div>
-          <h2 className='text-3xl sm:text-4xl font-bold'>
-            🚀 Certifications Earned
-          </h2>
+          <h2 className='text-3xl sm:text-4xl font-bold'>🏆 Achievements</h2>
           <p className='text-lg sm:text-xl font-medium mt-6 max-w-[700px] leading-9'>
-            I've taken a few classes and entered various web design competitions
-            to hone my present talents and broaden my knowledge.
+            Highlights of my professional certifications and recognitions
           </p>
         </div>
         <div className='mt-10'>
           <Slider {...settings} className='relative'>
-            {certifications.map((certification) => {
+            {achievements.map((achievement) => {
               return (
-                <CertificationItem
-                  title={certification.title}
-                  imgUrl={certification.imgUrl}
-                  key={uuidv4()}
+                <AchievementItem
+                  {...achievement}
+                  key={achievement.detailsUrl}
                 />
               )
             })}
@@ -57,4 +52,4 @@ const Certification = () => {
   )
 }
 
-export default Certification
+export default Achievements

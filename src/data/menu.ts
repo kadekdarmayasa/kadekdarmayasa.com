@@ -12,8 +12,8 @@ const menus = [
     href: '#projects',
   },
   {
-    name: 'Certifications',
-    href: '#certifications',
+    name: 'Achievements',
+    href: '#achievements',
   },
   {
     name: 'Contact Me',

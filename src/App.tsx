@@ -24,7 +24,7 @@ const App = () => {
       { id: 'home', name: 'Home' },
       { id: 'skills', name: 'Skills' },
       { id: 'projects', name: 'Projects' },
-      { id: 'certifications', name: 'Certifications' },
+      { id: 'achievements', name: 'Achievements' },
       { id: 'contact', name: 'Contact Me' },
     ]
 
