@@ -23,7 +23,7 @@ const Contact = () => {
   return (
     <section
       id='contact'
-      className='mt-20 bg-light-gray px-4 py-16 text-black scroll-mt-24 sm:px-8 sm:py-20'>
+      className='mt-16 sm:mt-20 bg-light-gray px-4 py-16 text-black scroll-mt-20 sm:px-8 sm:py-20'>
       <div className='w-full sm:container md:px-20'>
         <div>
           <h3 className='text-xl sm:text-2xl md:text-3xl block font-bold text-slate-500'>
