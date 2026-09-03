@@ -19,13 +19,13 @@ const Skills = () => {
           {skills.map((group) => (
             <div key={group.title}>
               <h3 className='text-2xl font-bold mb-6'>{group.title}</h3>
-              <div className='flex flex-wrap items-start gap-4'>
+              <div className='grid grid-cols-3 gap-4 md:grid-cols-4 lg:grid-cols-5'>
                 {group.skills.map((skill) => (
                   <article
                     key={skill.name}
                     tabIndex={0}
                     aria-label={skill.name}
-                    className='group relative z-0 flex aspect-square w-fit min-w-32 max-w-44 cursor-help flex-col items-center justify-center rounded-lg border border-black/10 p-4 text-center outline-none transition-all hover:z-20 hover:-translate-y-1 hover:border-purple hover:shadow-lg focus:z-20 focus:-translate-y-1 focus:border-purple focus:shadow-lg'>
+                    className='group relative z-0 flex aspect-square w-full min-w-0 cursor-help flex-col items-center justify-center rounded-lg border border-black/10 p-4 text-center outline-none transition-all hover:z-20 hover:-translate-y-1 hover:border-purple hover:shadow-lg focus:z-20 focus:-translate-y-1 focus:border-purple focus:shadow-lg'>
                     <i className={`${skill.icon} text-4xl sm:text-5xl`} />
                   </article>
                 ))}
