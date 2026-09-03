@@ -1,4 +1,4 @@
-import { AchievementItemProps } from '@features/certification/Item'
+import { AchievementItemProps } from '@features/achievements/Item'
 
 import javascriptCertification from '@assets/images/certifications/belajar-dasar-pemrograman-javascript.webp'
 import webProgrammingCertification from '@assets/images/certifications/belajar-dasar-pemrograman-web.webp'

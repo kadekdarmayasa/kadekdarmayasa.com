@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css'
 
 const Achievements = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 1000,
     slidesToShow: 2,
