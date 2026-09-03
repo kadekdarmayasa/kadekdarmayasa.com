@@ -27,7 +27,7 @@ const Achievements = () => {
   return (
     <section
       id='achievements'
-      className='mt-20 bg-white px-8 py-16 text-black scroll-mt-20'>
+      className='sm:mt-20 bg-white px-8 py-16 text-black scroll-mt-20'>
       <div className='sm:container md:px-20'>
         <div>
           <h2 className='text-3xl sm:text-4xl font-bold'>🏆 Achievements</h2>
